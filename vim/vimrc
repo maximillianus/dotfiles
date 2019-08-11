@@ -1,0 +1,62 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-python/python-syntax'
+Plugin 'moll/vim-node'
+Plugin 'scrooloose/nerdtree'
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+"""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+
+
+"""""""""""""""""""""""""""""""""""
+" linenumber and indentation
+"""""""""""""""""""""""""""""""""""
+set nu
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+
+"""""""""""""""""""""""""""""""""""
+" color scheme / syntax highlightinge
+"""""""""""""""""""""""""""""""""""
+set background=dark
+syntax enable
+colo gruvbox
+
+"""""""""""""""""""""""""""""""""""
+" search function
+"""""""""""""""""""""""""""""""""""
+" incremental search
+set incsearch
+" regular expression
+set magic
+" ignorecase while search
+set ignorecase
+
+"""""""""""""""""""""""""""""""""""
+" shortcuts
+"""""""""""""""""""""""""""""""""""
+map <C-n> :NERDTreeToggle<CR>
