@@ -1,0 +1,10 @@
+set completion-ignore-case on
+
+## enable Alt-arrows
+"\e[1;3D": backward-word
+"\e[1;3C": forward-word
+
+## enable Ctrl-arrows
+#"\e[1;5C": forward-word
+#"\e[1;5D": backward-word
+
