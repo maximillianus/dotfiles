@@ -1,0 +1,100 @@
+" editing
+set nu
+set ruler
+
+" Syntax highlighting
+syntax on
+filetype plugin indent on
+syntax enable
+" Use new regular expression engine
+set re=0 " for better typescript syntax highlighting
+
+" Whitespace and Tabs
+set expandtab " convert tab to space
+set tabstop=2 " tab = x whitespace
+set shiftwidth=4 " level of indent
+" See whitespaces and tabs characters
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
+" set listchars=eol:$
+
+" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search
+
+" Status bar
+set laststatus=2
+
+" Tabs
+" How to create new tabs
+" Split view
+" How to split view horizontal and vertical
+" How to switch between tabs and views
+
+" Color scheme (terminal)
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+" airline-themes
+let g:airline_theme='simple'
+
+" Plugin
+call plug#begin()
+" colorscheme
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'altercation/vim-colors-solarized'
+" git addon
+Plug 'tpope/vim-fugitive'
+" bottom status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Tree explorer
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+" Syntax / Language highlight
+Plug 'scrooloose/syntastic'
+Plug 'quramy/tsuquyomi'
+call plug#end()
+
+autocmd VimEnter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme onedark
+autocmd VimEnter * NERDTree | wincmd p
+
+
+" NerdCommenter setup
+" " Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" Using commenter
+" Select multiple lines. press \cc to comment. press \cu to uncomment.1
+
+" Syntastic setup
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
