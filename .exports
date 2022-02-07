@@ -1,0 +1,32 @@
+# Exports
+
+# Terminal Profile
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export TERM="xterm-256color" 
+# export PS1='\[\e[0;31m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;33m\]\w\[\e[0m\]\n\[\e[1;33m\][\d \t]\[\e[m\]$ '
+export PS1='\[\e[0;31m\]\u\[\e[0m\]@\[\e[0;32m\]aws-roa-cli-ninja\[\e[0m\]:\[\e[0;33m\]\w\[\e[0m\]\n\[\e[1;33m\][\d \t]\[\e[m\]$ '
+
+# AWS
+export AWS_REGION="ap-southeast-1"
+export CDK_DEFAULT_ACCOUNT="" # fill with AWS account ID here
+export CDK_DEFAULT_REGION="ap-southeast-1"
+
+# PATH
+export PATH="$HOME/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+export PATH="~/Library/Python/3.9/bin":$PATH
+export PATH="/usr/local/opt/python@3.8/bin":$PATH
+
+# JQ Colors
+export JQ_COLORS="1;30:0;39:0;39:0;39:0;32:1;39:1;36"
+export FIELD_COLOR="1;34"
+export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# zsh silencer
+export BASH_SILENCE_DEPRECATION_WARNING=1t

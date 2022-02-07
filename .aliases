@@ -1,0 +1,6 @@
+# Aliases
+
+alias ll="ls -la"
+alias gc="git commit -m"
+alias ga="git add"
+alias gs="git status"
