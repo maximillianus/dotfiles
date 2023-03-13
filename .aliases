@@ -4,3 +4,7 @@ alias ll="ls -la"
 alias gc="git commit -m"
 alias ga="git add"
 alias gs="git status"
+alias gp="git push origin"
+
+alias bat="bat -pp"
+alias pcat="pygmentize -g"
