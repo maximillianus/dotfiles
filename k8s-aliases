@@ -1,0 +1,27 @@
+# useful aliases for CKA/D/S Exam
+
+alias k="kubectl"
+
+# dry-run
+alias kdry="kubectl --dry-run=client"
+
+# dry-run output yaml
+alias kyaml="kubectl --dry-run=client -o yaml"
+
+# Set default namespace
+alias ksc='kubectl config set-context --current --namespace'
+
+# Get current namespace
+alias kgetns='kubectl describe pod | grep -i namespace -m 1'
+
+# Describe k8s object
+alias kd='kubectl describe'
+
+# Get k8s object
+alias kg='kubectl get'
+
+# Create an object
+alias kc='kubectl create -f'
+
+# shortcut dry-run
+export dr="--dry-run=client -o yaml"

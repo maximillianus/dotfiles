@@ -1,0 +1,17 @@
+[default]
+region=ap-southeast-1
+output=json
+s3 =
+    max_concurrent_requests = 30
+    multipart_chunksize = 16MB
+
+[profile user1]
+region=ap-southeast-1
+output=json
+
+[profile role1]
+region=us-east-1
+output=json
+
+[profile userwithca]
+ca_bundle = ./ca-bundle.pem

@@ -1,0 +1,17 @@
+# Get more at https://github.com/awslabs/awscli-aliases/blob/master/alias
+
+[toplevel]
+
+whoami = sts get-caller-identity
+
+# check running instances
+running-instances = ec2 describe-instances \
+    --filter Name=instance-state-name,Values=running \
+    --output table \
+    --query 'Reservations[].Instances[].{ID: InstanceId,Hostname: PublicDnsName,Name: Tags[?Key==`Name`].Value | [0],Type: InstanceType, Platform: Platform || `Linux`}'
+
+cfn = cloudformation
+
+[command ec2]
+regions = describe-regions
+
